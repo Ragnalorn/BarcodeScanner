@@ -14,13 +14,12 @@ Pod::Spec.new do |s|
   s.platform = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Sources/**/*'
   s.resource_bundles = {
     'BarcodeScanner' => ['Images/*.{png}'],
     'Localization' => ['Localization/*.lproj/Localizable.strings']
   }
 
+  s.swift_version = '5.0'
+  s.source_files = 'Sources/**/*'
   s.frameworks = 'UIKit', 'AVFoundation'
-
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end
